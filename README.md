@@ -22,7 +22,8 @@ rm -rf .git # vapor starts a git repo inside the project folder, but this projec
 echo "4.1.1" > .swift-version
 
 # make Procfile for Heroku
-echo "web: Run serve --env production --hostname 0.0.0.0 --port $PORT" > Procfile
+echo "web: Run serve --env production --hostname 0.0.0.0 --port \$PORT
+local: .build/debug/Run serve --env production --hostname 0.0.0.0 --port 8080" > Procfile
 ```
 
 Open the Xcode project and make out the edits from commit #d26713f.
@@ -40,6 +41,13 @@ popd
 pushd HelloWorld
 vapor run serve & # or run the `Run` scheme in Xcode.
 popd
+open http://localhost:8080
+```
+
+### Locally with Heroku
+
+```sh
+heroku local local &
 open http://localhost:8080
 ```
 
