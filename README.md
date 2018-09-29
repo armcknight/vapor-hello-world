@@ -19,6 +19,8 @@ pushd HelloHelloWorld
 vapor xcode # I had to run this twice, first time I got a bunch of LibreSSL errors about not being able to connect to GitHub to download the dependencies
 rm -rf .git # vapor starts a git repo inside the project folder, but this project is inside a repo already!
 
+echo "4.1.1" > .swift-version
+
 # make Procfile for Heroku
 echo "web: Run serve --env production --hostname 0.0.0.0 --port $PORT" > Procfile
 ```
