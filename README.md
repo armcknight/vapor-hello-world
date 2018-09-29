@@ -23,7 +23,7 @@ echo "4.1.1" > .swift-version
 
 # make Procfile for Heroku
 echo "web: Run serve --env production --hostname 0.0.0.0 --port \$PORT
-local: .build/debug/Run serve --env production --hostname 0.0.0.0 --port 8080" > Procfile
+local: vapor run serve" > Procfile
 ```
 
 > At this point, the app is ready, but it has two pages and some example models and controllers, and a SQLite database connection. To simplify to a barebones Hello, world!, open the Xcode project and make the same edits as [this commit](https://github.com/armcknight/vapor-hello-world/commit/d26713fb2e5e0ddc352316a7ad9b5e30a974da68).
@@ -47,8 +47,10 @@ open http://localhost:8080
 ### Locally with Heroku
 
 ```sh
+pushd HelloWorld
 heroku local local &
 open http://localhost:8080
+popd
 ```
 
 ### Remote
