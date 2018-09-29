@@ -26,7 +26,7 @@ echo "web: Run serve --env production --hostname 0.0.0.0 --port \$PORT
 local: .build/debug/Run serve --env production --hostname 0.0.0.0 --port 8080" > Procfile
 ```
 
-Open the Xcode project and make out the edits from commit #d26713f.
+Open the Xcode project and make the same edits as [this commit](https://github.com/armcknight/vapor-hello-world/commit/d26713fb2e5e0ddc352316a7ad9b5e30a974da68).
 
 ```sh
 vapor build
