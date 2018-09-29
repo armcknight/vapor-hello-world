@@ -1,12 +1,12 @@
 # vapor-hello-world
 
-A Hello, world! server app written in [Swift](), using [Vapor](), deployable on [Heroku]().
+A Hello, world! server app written in [Swift](https://swift.org), using [Vapor](https://vapor.codes), deployable on [Heroku](http://heroku.com).
 
 ## Requirements
 
 - Xcode (which delivers swift)
-- [vapor]()
-- [heroku-cli]()
+- [vapor](https://docs.vapor.codes/3.0/install/macos/)
+- [heroku cli](https://devcenter.heroku.com/articles/heroku-cli)
 
 > Try `brew install vapor/tap/vapor heroku-cli`
 
