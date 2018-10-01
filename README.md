@@ -22,8 +22,8 @@ rm -rf .git # vapor starts a git repo inside the project folder, but this projec
 echo "4.1.1" > .swift-version
 
 # make Procfile for Heroku
-echo "web: Run serve --env production --hostname 0.0.0.0 --port \$PORT
-local: vapor run serve" > Procfile
+echo "web: Run --env production --hostname 0.0.0.0 --port \$PORT
+local: vapor run" > Procfile
 ```
 
 > At this point, the app is ready, but it has two pages and some example models and controllers, and a SQLite database connection. To simplify to a barebones Hello, world!, open the Xcode project and make the same edits as [this commit](https://github.com/armcknight/vapor-hello-world/commit/d26713fb2e5e0ddc352316a7ad9b5e30a974da68).
@@ -39,7 +39,7 @@ popd
 
 ```sh
 pushd HelloWorld
-vapor run serve & # or run the `Run` scheme in Xcode.
+vapor run & # or run the `Run` scheme in Xcode.
 popd
 open http://localhost:8080
 ```
